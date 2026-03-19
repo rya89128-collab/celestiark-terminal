@@ -29,7 +29,7 @@ export function CardDetailModal({ card, drawCount = 0, onClose }: CardDetailModa
           </button>
         </header>
         <div className="modal-panel__content">
-          <PersonaCard card={card} />
+          <PersonaCard card={card} variant="detail" />
           <div className="modal-panel__notes">
             <div className="terminal-detail">
               <span>ARCHIVE ID</span>

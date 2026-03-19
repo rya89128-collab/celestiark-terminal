@@ -7,6 +7,7 @@ type PersonaCardProps = {
   card: CardLog;
   compact?: boolean;
   onClick?: () => void;
+  variant?: 'reveal' | 'detail';
 };
 
 function buildPlaceholder(card: CardLog): string {
@@ -27,21 +28,33 @@ function buildPlaceholder(card: CardLog): string {
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
-function formatLore(lore: string): string {
-  return lore.trim() === '' || lore === 'ログ断片未設定'
-    ? 'ログ断片は未登録です。ムネモシュネ照合後の追記を待っています。'
-    : lore;
+function formatLore(lore: string): string | null {
+  if (lore.trim() === '' || lore === 'ログ断片未設定') {
+    return null;
+  }
+
+  return lore;
 }
 
-export function PersonaCard({ card, compact = false, onClick }: PersonaCardProps) {
+export function PersonaCard({
+  card,
+  compact = false,
+  onClick,
+  variant = 'reveal',
+}: PersonaCardProps) {
   const [imageFailed, setImageFailed] = useState(false);
   const rarity = rarityTheme[card.rarity];
   const placeholder = useMemo(() => buildPlaceholder(card), [card]);
+  const lore = formatLore(card.lore);
+  const isReveal = variant === 'reveal';
 
   return (
     <CardFrame card={card} compact={compact}>
       <button
-        className={compact ? 'persona-card is-compact' : 'persona-card'}
+        className={[
+          compact ? 'persona-card is-compact' : 'persona-card',
+          isReveal ? 'is-reveal' : 'is-detail',
+        ].join(' ')}
         onClick={onClick}
         type="button"
       >
@@ -63,17 +76,21 @@ export function PersonaCard({ card, compact = false, onClick }: PersonaCardProps
             </div>
             <div className="persona-card__pill">{card.rarity}</div>
           </header>
-          <dl className="persona-card__meta">
-            <div>
-              <dt>CLASS</dt>
-              <dd>{card.class}</dd>
-            </div>
-            <div>
-              <dt>EIDOLON</dt>
-              <dd>{card.eidolon}</dd>
-            </div>
-          </dl>
-          <p className="persona-card__lore">{formatLore(card.lore)}</p>
+          {!isReveal && (
+            <>
+              <dl className="persona-card__meta">
+                <div>
+                  <dt>CLASS</dt>
+                  <dd>{card.class}</dd>
+                </div>
+                <div>
+                  <dt>EIDOLON</dt>
+                  <dd>{card.eidolon}</dd>
+                </div>
+              </dl>
+              {lore && <p className="persona-card__lore">{lore}</p>}
+            </>
+          )}
         </div>
       </button>
     </CardFrame>

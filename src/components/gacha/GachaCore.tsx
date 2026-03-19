@@ -150,10 +150,17 @@ export function GachaCore({
   const lastSummary = lastResultCards.length > 0
     ? `${lastResultCards.length}件の結果を保存中`
     : 'まだ同期していません';
+  const showMobileFollowupActions = Boolean(session && currentStep?.phase === 'complete');
 
   return (
     <section className="gacha-core">
-      <div className="terminal-panel terminal-panel--main">
+      <div
+        className={[
+          'terminal-panel',
+          'terminal-panel--main',
+          showMobileFollowupActions ? 'has-mobile-followup-actions' : '',
+        ].join(' ')}
+      >
         <header className="terminal-panel__header">
           <div>
             <p className="eyebrow">MNEMOSYNE ARCHIVE TERMINAL</p>
@@ -162,9 +169,19 @@ export function GachaCore({
         </header>
 
         <p className="control-copy">
-          1回同期は1枚ずつ、10回同期はまとめて引くモードです。
-          今回から重複して同じカードが出る仕様に変更しています。
+          1回同期は1件ずつの照合、10回同期は一括で複数ログを呼び出すモードです。
         </p>
+
+        <div className="mobile-sync-summary">
+          <article className="mobile-sync-summary__item">
+            <span>集めた種類</span>
+            <strong>{storage.syncedLogs.length} / {cards.length}</strong>
+          </article>
+          <article className="mobile-sync-summary__item">
+            <span>累計出現</span>
+            <strong>{totalDraws} 回</strong>
+          </article>
+        </div>
 
         <div className="control-guide">
           <article className="control-guide__stat">
@@ -204,6 +221,52 @@ export function GachaCore({
           </div>
         )}
 
+        {session && currentStep && (
+          <>
+            <div
+              className="result-capture"
+              ref={currentStep.phase === 'complete' ? resultCaptureRef : undefined}
+            >
+              <GachaSequence
+                currentPhase={currentStep}
+                onInspect={inspectResult}
+                onVideoFallback={() => setVideoFallback(true)}
+                phaseIndex={phaseIndex}
+                session={session}
+              />
+
+              {currentStep.phase === 'complete' && (
+                <div className="terminal-actions terminal-actions--primary mobile-followup-actions">
+                  <button onClick={() => startSync(1, false)} type="button">
+                    1回同期
+                  </button>
+                  <button onClick={() => startSync(10, false)} type="button">
+                    10回同期
+                  </button>
+                  <button className="ghost-button" onClick={onOpenLogBoard} type="button">
+                    コレクション一覧
+                  </button>
+                </div>
+              )}
+
+              {currentStep.phase === 'complete' && (
+                <SyncResultPanel
+                  onDownload={handleDownloadResult}
+                  onInspect={inspectResult}
+                  session={session}
+                />
+              )}
+            </div>
+
+            {currentStep.phase === 'complete' && showFullSyncCelebration && (
+              <FullSyncCelebration
+                onClose={() => setShowFullSyncCelebration(false)}
+                totalCards={cards.length}
+              />
+            )}
+          </>
+        )}
+
         <div className="terminal-actions terminal-actions--maintenance">
           <button className="ghost-button" disabled={isRunning} onClick={resetRarity} type="button">
             レアリティリセット
@@ -221,39 +284,28 @@ export function GachaCore({
           映像演出が読み込めない場合は、自動で簡易演出に切り替わります。
           現在の状態: {videoFallback ? '簡易演出' : '通常演出'}
         </p>
-      </div>
 
-      {session && currentStep && (
-        <>
-          <div
-            className="result-capture"
-            ref={currentStep.phase === 'complete' ? resultCaptureRef : undefined}
-          >
-            <GachaSequence
-              currentPhase={currentStep}
-              onInspect={inspectResult}
-              onVideoFallback={() => setVideoFallback(true)}
-              phaseIndex={phaseIndex}
-              session={session}
-            />
-
-            {currentStep.phase === 'complete' && (
-              <SyncResultPanel
-                onDownload={handleDownloadResult}
-                onInspect={inspectResult}
-                session={session}
-              />
-            )}
+        <details className="mobile-utility-drawer">
+          <summary>詳細設定を開く</summary>
+          <div className="terminal-actions terminal-actions--maintenance">
+            <button className="ghost-button" disabled={isRunning} onClick={resetRarity} type="button">
+              レアリティリセット
+            </button>
+            <button className="ghost-button" disabled={isRunning} onClick={resetEverything} type="button">
+              ガチャを初期化
+            </button>
           </div>
-
-          {currentStep.phase === 'complete' && showFullSyncCelebration && (
-            <FullSyncCelebration
-              onClose={() => setShowFullSyncCelebration(false)}
-              totalCards={cards.length}
-            />
-          )}
-        </>
-      )}
+          <p className="action-note">
+            レアリティリセットは「どのカードが UR / SSR / SR になるか」を作り直します。
+          </p>
+          <p className="action-note">
+            ガチャを初期化は出現履歴と回数を消して最初から遊び直します。
+          </p>
+          <p className="action-note">
+            現在の状態: {videoFallback ? '簡易演出' : '通常演出'}
+          </p>
+        </details>
+      </div>
     </section>
   );
 }
