@@ -1,0 +1,76 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Bahnschrift', 'Aptos', 'Yu Gothic UI', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(117, 204, 255, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(255, 216, 151, 0.12), transparent 26%),
+    linear-gradient(180deg, #020811 0%, #06101a 34%, #081925 100%);
+  color: #e1f2ff;
+  --bg: #061019;
+  --bg-soft: rgba(12, 26, 40, 0.72);
+  --bg-panel: rgba(9, 20, 31, 0.82);
+  --bg-panel-strong: rgba(11, 22, 35, 0.92);
+  --line: rgba(129, 205, 255, 0.18);
+  --line-strong: rgba(148, 215, 255, 0.32);
+  --glow: rgba(131, 213, 255, 0.18);
+  --glow-strong: rgba(156, 228, 255, 0.3);
+  --warm: #f5d28b;
+  --cool: #93dbff;
+  --text: #e1f2ff;
+  --text-soft: rgba(225, 242, 255, 0.72);
+  --text-faint: rgba(225, 242, 255, 0.45);
+  --danger: #ff8d78;
+  --success: #8cf3be;
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --shadow-panel: 0 26px 72px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 36px rgba(125, 206, 255, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    linear-gradient(90deg, rgba(133, 215, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(133, 215, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at top, rgba(122, 206, 255, 0.12), transparent 38%),
+    linear-gradient(180deg, #040913, #081521 58%, #050d15);
+  background-size: 72px 72px, 72px 72px, auto, auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  color: var(--text-faint);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}

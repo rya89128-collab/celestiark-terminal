@@ -1,0 +1,942 @@
+[
+  {
+    "id": "001",
+    "studentId": "CA-1246-E-01",
+    "name": "ブリギッタ＝ボルトマン",
+    "eidolon": "マシーネン＝リッター",
+    "class": "Eldam",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-01.webp"
+  },
+  {
+    "id": "002",
+    "studentId": "CA-1246-E-02",
+    "name": "ルアン",
+    "eidolon": "アルカブス・マージコ",
+    "class": "Eldam",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-02.webp"
+  },
+  {
+    "id": "003",
+    "studentId": "CA-1246-E-03",
+    "name": "サヤ・クロイツ",
+    "eidolon": "イグニス",
+    "class": "Eldam",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-03.webp"
+  },
+  {
+    "id": "004",
+    "studentId": "CA-1246-E-04",
+    "name": "朝倉 灯莉",
+    "eidolon": "Vesper",
+    "class": "Eldam",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-04.webp"
+  },
+  {
+    "id": "005",
+    "studentId": "CA-1246-E-05",
+    "name": "シータ・ロア",
+    "eidolon": "ゲイルヘルム",
+    "class": "Eldam",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-05.webp"
+  },
+  {
+    "id": "006",
+    "studentId": "CA-1246-E-07",
+    "name": "カイ・ゼロインデックス",
+    "eidolon": "シェアド・メモリー",
+    "class": "Eldam",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-07.webp"
+  },
+  {
+    "id": "007",
+    "studentId": "CA-1246-E-09",
+    "name": "ルナ・ソレイユ",
+    "eidolon": "ベル",
+    "class": "Eldam",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-09.webp"
+  },
+  {
+    "id": "008",
+    "studentId": "CA-1246-E-12",
+    "name": "影猫姫ミア",
+    "eidolon": "ファントム",
+    "class": "Eldam",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-12.webp"
+  },
+  {
+    "id": "009",
+    "studentId": "CA-1246-E-13",
+    "name": "白鐘 ミリア",
+    "eidolon": "ルクス・セラフィ",
+    "class": "Eldam",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-13.webp"
+  },
+  {
+    "id": "010",
+    "studentId": "CA-1246-E-14",
+    "name": "シオ",
+    "eidolon": "コハク",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-14.webp"
+  },
+  {
+    "id": "011",
+    "studentId": "CA-1246-E-15",
+    "name": "ハニィ",
+    "eidolon": "リエル",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-E-15.webp"
+  },
+  {
+    "id": "012",
+    "studentId": "CA-1246-N-01",
+    "name": "ネムリ",
+    "eidolon": "AUR",
+    "class": "Novalt",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-N-01.webp"
+  },
+  {
+    "id": "013",
+    "studentId": "CA-1246-N-02",
+    "name": "敬親 切華",
+    "eidolon": "断ち切る者",
+    "class": "Novalt",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-N-02.webp"
+  },
+  {
+    "id": "014",
+    "studentId": "CA-1246-N-03",
+    "name": "柳・玉輪",
+    "eidolon": "アズラエル",
+    "class": "Novalt",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-N-03.webp"
+  },
+  {
+    "id": "015",
+    "studentId": "CA-1246-N-05",
+    "name": "あずき",
+    "eidolon": "こいつ",
+    "class": "Novalt",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-N-05.webp"
+  },
+  {
+    "id": "016",
+    "studentId": "CA-1246-N-06",
+    "name": "白波 こもれび",
+    "eidolon": "ネビュラグラトニー",
+    "class": "Novalt",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-N-06.webp"
+  },
+  {
+    "id": "017",
+    "studentId": "CA-1246-N-08",
+    "name": "影縫ムゲン",
+    "eidolon": "自身の影",
+    "class": "Novalt",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-N-08.webp"
+  },
+  {
+    "id": "018",
+    "studentId": "CA-1246-N-10",
+    "name": "姫さま",
+    "eidolon": "ヒツジ",
+    "class": "Novalt",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-N-10.webp"
+  },
+  {
+    "id": "019",
+    "studentId": "CA-1246-N-11",
+    "name": "マドーくん",
+    "eidolon": "カルヴァリア",
+    "class": "Novalt",
+    "rarity": "UR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-N-11.webp"
+  },
+  {
+    "id": "020",
+    "studentId": "CA-1246-N-14",
+    "name": "セレーネ・ヴァルツィア",
+    "eidolon": "トルメリア",
+    "class": "Novalt",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-N-14.webp"
+  },
+  {
+    "id": "021",
+    "studentId": "CA-1246-P-01",
+    "name": "神崎タフネス",
+    "eidolon": "天衝機神 アストラ・イグザム",
+    "class": "Profeil",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-P-01.webp"
+  },
+  {
+    "id": "022",
+    "studentId": "CA-1246-P-03",
+    "name": "シエル・ステラ",
+    "eidolon": "アリ",
+    "class": "Profeil",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-P-03.webp"
+  },
+  {
+    "id": "023",
+    "studentId": "CA-1246-P-06",
+    "name": "霞月 つむぎ",
+    "eidolon": "忿怒守護霊 玄雷",
+    "class": "Profeil",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-P-06.webp"
+  },
+  {
+    "id": "024",
+    "studentId": "CA-1246-P-08",
+    "name": "星宮 雫",
+    "eidolon": "虹玉",
+    "class": "Profeil",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-P-08.webp"
+  },
+  {
+    "id": "025",
+    "studentId": "CA-1246-P-09",
+    "name": "氷海 ルイス",
+    "eidolon": "エグザリオン",
+    "class": "Profeil",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-P-09.webp"
+  },
+  {
+    "id": "026",
+    "studentId": "CA-1246-P-10",
+    "name": "南海 虹心",
+    "eidolon": "アヌエヌエ",
+    "class": "Profeil",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-P-10.webp"
+  },
+  {
+    "id": "027",
+    "studentId": "CA-1246-P-13",
+    "name": "ネヴァリス・ノクティリア",
+    "eidolon": "カラミュルグ",
+    "class": "Profeil",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-P-13.webp"
+  },
+  {
+    "id": "028",
+    "studentId": "CA-1246-P-14",
+    "name": "蒼風 レイシア",
+    "eidolon": "ルミエル",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-P-14.webp"
+  },
+  {
+    "id": "029",
+    "studentId": "CA-1246-P-15",
+    "name": "神代レイナ",
+    "eidolon": "アルス・カウサ",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-P-15.webp"
+  },
+  {
+    "id": "030",
+    "studentId": "CA-1246-S-03",
+    "name": "杜逐男",
+    "eidolon": "死神カロウシ",
+    "class": "Speculato",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-S-03.webp"
+  },
+  {
+    "id": "031",
+    "studentId": "CA-1246-S-04",
+    "name": "セレナ・ヘイズ",
+    "eidolon": "ウィルチェア",
+    "class": "Speculato",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-S-04.webp"
+  },
+  {
+    "id": "032",
+    "studentId": "CA-1246-S-05",
+    "name": "きら",
+    "eidolon": "ぽん",
+    "class": "Speculato",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-S-05.webp"
+  },
+  {
+    "id": "033",
+    "studentId": "CA-1246-S-06",
+    "name": "Leo Swift",
+    "eidolon": "紫電来臨",
+    "class": "Speculato",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-S-06.webp"
+  },
+  {
+    "id": "034",
+    "studentId": "CA-1246-S-08",
+    "name": "御影 綾",
+    "eidolon": "焔喰, 影衆",
+    "class": "Speculato",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-S-08.webp"
+  },
+  {
+    "id": "035",
+    "studentId": "CA-1246-S-11",
+    "name": "錬釵 鍋鉤鏤",
+    "eidolon": "ぐるぐる",
+    "class": "Speculato",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-S-11.webp"
+  },
+  {
+    "id": "036",
+    "studentId": "CA-1246-S-13",
+    "name": "フローラ・鈴木",
+    "eidolon": "アイン",
+    "class": "Speculato",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-S-13.webp"
+  },
+  {
+    "id": "037",
+    "studentId": "CA-1246-S-14",
+    "name": "月城",
+    "eidolon": "凪",
+    "class": "Speculato",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-S-14.webp"
+  },
+  {
+    "id": "038",
+    "studentId": "CA-1246-S-15",
+    "name": "澪",
+    "eidolon": "ちび",
+    "class": "Speculato",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-S-15.webp"
+  },
+  {
+    "id": "039",
+    "studentId": "CA-1246-V-03",
+    "name": "リリ",
+    "eidolon": "ルル",
+    "class": "Valkein",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-V-03.webp"
+  },
+  {
+    "id": "040",
+    "studentId": "CA-1246-V-05",
+    "name": "グラゴギオ•ゴルドラギア",
+    "eidolon": "灼竜牙",
+    "class": "Valkein",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-V-05.webp"
+  },
+  {
+    "id": "041",
+    "studentId": "CA-1246-V-06",
+    "name": "夢星 渺",
+    "eidolon": "夜",
+    "class": "Valkein",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-V-06.webp"
+  },
+  {
+    "id": "042",
+    "studentId": "CA-1246-V-07",
+    "name": "夜白 紡",
+    "eidolon": "白燈",
+    "class": "Valkein",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-V-07.webp"
+  },
+  {
+    "id": "043",
+    "studentId": "CA-1246-V-08",
+    "name": "クレイナ",
+    "eidolon": "テクノズ・ジャングル",
+    "class": "Valkein",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-V-08.webp"
+  },
+  {
+    "id": "044",
+    "studentId": "CA-1246-V-11",
+    "name": "アイズ",
+    "eidolon": "ブルー",
+    "class": "Valkein",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-V-11.webp"
+  },
+  {
+    "id": "045",
+    "studentId": "CA-1246-V-13",
+    "name": "アニス・ハルトマン",
+    "eidolon": "シェルノワール",
+    "class": "Valkein",
+    "rarity": "SSR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-V-13.webp"
+  },
+  {
+    "id": "046",
+    "studentId": "CA-1246-V-14",
+    "name": "セラ・ノクス",
+    "eidolon": "ヴェイル・ハウンド",
+    "class": "Valkein",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-V-14.webp"
+  },
+  {
+    "id": "047",
+    "studentId": "CA-1246-V-15",
+    "name": "影森ノクシア",
+    "eidolon": "ヴェルグラ",
+    "class": "Valkein",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1246-V-15.webp"
+  },
+  {
+    "id": "048",
+    "studentId": "CA-1247-E-01",
+    "name": "雨木 クロエ",
+    "eidolon": "AΩ-03〈アズライト〉",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-01.webp"
+  },
+  {
+    "id": "049",
+    "studentId": "CA-1247-E-02",
+    "name": "こはく",
+    "eidolon": "鈴",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-02.webp"
+  },
+  {
+    "id": "050",
+    "studentId": "CA-1247-E-03",
+    "name": "こむぎ",
+    "eidolon": "鈴",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-03.webp"
+  },
+  {
+    "id": "051",
+    "studentId": "CA-1247-E-05",
+    "name": "白縫セレス",
+    "eidolon": "縫魂守ノア",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-05.webp"
+  },
+  {
+    "id": "052",
+    "studentId": "CA-1247-E-06",
+    "name": "アンリース",
+    "eidolon": "タイム・イズ・クロック",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-06.webp"
+  },
+  {
+    "id": "053",
+    "studentId": "CA-1247-E-07",
+    "name": "クロノアール",
+    "eidolon": "カイゼルスヴァルト",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-07.webp"
+  },
+  {
+    "id": "054",
+    "studentId": "CA-1247-E-08",
+    "name": "クゥオドル",
+    "eidolon": "未顕現",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-08.webp"
+  },
+  {
+    "id": "055",
+    "studentId": "CA-1247-E-09",
+    "name": "雷道 礼央",
+    "eidolon": "蒼雷の鬼神 轟天",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-09.webp"
+  },
+  {
+    "id": "056",
+    "studentId": "CA-1247-E-10",
+    "name": "Sascha Lichtner",
+    "eidolon": "Kristallheilung",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-10.webp"
+  },
+  {
+    "id": "057",
+    "studentId": "CA-1247-E-11",
+    "name": "金子 悠真",
+    "eidolon": "パラン・ポレン",
+    "class": "Eldam",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-11.webp"
+  },
+  {
+    "id": "058",
+    "studentId": "CA-1247-E-12",
+    "name": "黒錫 燐",
+    "eidolon": "スラッジ",
+    "class": "Eldam",
+    "rarity": "SSR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-E-12.webp"
+  },
+  {
+    "id": "059",
+    "studentId": "CA-1247-N-02",
+    "name": "ジェイ・マキナ",
+    "eidolon": "機械人形",
+    "class": "Novalt",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-N-02.webp"
+  },
+  {
+    "id": "060",
+    "studentId": "CA-1247-N-04",
+    "name": "シャフ",
+    "eidolon": "ツヨシ",
+    "class": "Novalt",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-N-04.webp"
+  },
+  {
+    "id": "061",
+    "studentId": "CA-1247-N-06",
+    "name": "ミレイア・グラス",
+    "eidolon": "パララックス・モノクル",
+    "class": "Novalt",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-N-06.webp"
+  },
+  {
+    "id": "062",
+    "studentId": "CA-1247-N-07",
+    "name": "エルナ・ストライト",
+    "eidolon": "スノーホワイト・アイリス",
+    "class": "Novalt",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-N-07.webp"
+  },
+  {
+    "id": "063",
+    "studentId": "CA-1247-N-11",
+    "name": "ヤシ・ヒョロモ",
+    "eidolon": "ペン・ホアッゲ",
+    "class": "Novalt",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-N-11.webp"
+  },
+  {
+    "id": "064",
+    "studentId": "CA-1247-N-12",
+    "name": "アルベール・アラライ",
+    "eidolon": "硝子鈎",
+    "class": "Novalt",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-N-12.webp"
+  },
+  {
+    "id": "065",
+    "studentId": "CA-1247-N-13",
+    "name": "透海 ゆるり",
+    "eidolon": "アグア・クラル",
+    "class": "Novalt",
+    "rarity": "SSR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-N-13.webp"
+  },
+  {
+    "id": "066",
+    "studentId": "CA-1247-N-14",
+    "name": "綾瀬 霧生",
+    "eidolon": "ヴェイル",
+    "class": "Novalt",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-N-14.webp"
+  },
+  {
+    "id": "067",
+    "studentId": "CA-1247-N-15",
+    "name": "阿部アサヒ",
+    "eidolon": "ザクロ",
+    "class": "Novalt",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-N-15.webp"
+  },
+  {
+    "id": "068",
+    "studentId": "CA-1247-P-01",
+    "name": "ニカ・クレスト",
+    "eidolon": "ラクン・イッヌ",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-P-01.webp"
+  },
+  {
+    "id": "069",
+    "studentId": "CA-1247-P-05",
+    "name": "ベラトリックス",
+    "eidolon": "冥府の調べ",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-P-05.webp"
+  },
+  {
+    "id": "070",
+    "studentId": "CA-1247-P-07",
+    "name": "アッシュ・エンペラー",
+    "eidolon": "クロウ エンジン",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-P-07.webp"
+  },
+  {
+    "id": "071",
+    "studentId": "CA-1247-P-08",
+    "name": "宵星 ネムリ",
+    "eidolon": "オルビス・グリント",
+    "class": "Profeil",
+    "rarity": "SSR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-P-08.webp"
+  },
+  {
+    "id": "072",
+    "studentId": "CA-1247-P-10",
+    "name": "アリア・ヴェルム",
+    "eidolon": "ノクス・レイン",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-P-10.webp"
+  },
+  {
+    "id": "073",
+    "studentId": "CA-1247-P-11",
+    "name": "叶芽 澪",
+    "eidolon": "プリズム・フラグメント",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-P-11.webp"
+  },
+  {
+    "id": "074",
+    "studentId": "CA-1247-P-13",
+    "name": "灰音 澪",
+    "eidolon": "第零楽章",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-P-13.webp"
+  },
+  {
+    "id": "075",
+    "studentId": "CA-1247-P-14",
+    "name": "タキオン＝クロノメモワール",
+    "eidolon": "時空杖（錠）クロノメータ",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-P-14.webp"
+  },
+  {
+    "id": "076",
+    "studentId": "CA-1247-P-15",
+    "name": "竜丸カイト",
+    "eidolon": "千辺万戈(アピリ•エフェヴル)",
+    "class": "Profeil",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-P-15.webp"
+  },
+  {
+    "id": "077",
+    "studentId": "CA-1247-S-02",
+    "name": "成金息子ドラン",
+    "eidolon": "成金仕様メイドロボ",
+    "class": "Speculato",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-S-02.webp"
+  },
+  {
+    "id": "078",
+    "studentId": "CA-1247-S-03",
+    "name": "ヨツバ",
+    "eidolon": "コロ",
+    "class": "Speculato",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-S-03.webp"
+  },
+  {
+    "id": "079",
+    "studentId": "CA-1247-S-06",
+    "name": "レイカ",
+    "eidolon": "グリッチ・ヴォイド",
+    "class": "Speculato",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-S-06.webp"
+  },
+  {
+    "id": "080",
+    "studentId": "CA-1247-S-07",
+    "name": "縫月 シノ",
+    "eidolon": "メルテ",
+    "class": "Speculato",
+    "rarity": "SR",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-S-07.webp"
+  },
+  {
+    "id": "081",
+    "studentId": "CA-1247-S-08",
+    "name": "鴉羽 零",
+    "eidolon": "執事クロ",
+    "class": "Speculato",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-S-08.webp"
+  },
+  {
+    "id": "082",
+    "studentId": "CA-1247-S-09",
+    "name": "黒葉 奇志",
+    "eidolon": "黒い仮面《クラブ・クラウン》",
+    "class": "Speculato",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-S-09.webp"
+  },
+  {
+    "id": "083",
+    "studentId": "CA-1247-S-11",
+    "name": "宵霧 ゼン",
+    "eidolon": "クロノス",
+    "class": "Speculato",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-S-11.webp"
+  },
+  {
+    "id": "084",
+    "studentId": "CA-1247-S-12",
+    "name": "カイ・アーゼル",
+    "eidolon": "ヴァルク",
+    "class": "Speculato",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-S-12.webp"
+  },
+  {
+    "id": "085",
+    "studentId": "CA-1247-S-13",
+    "name": "ティキちゃ",
+    "eidolon": "tiki",
+    "class": "Speculato",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-S-13.webp"
+  },
+  {
+    "id": "086",
+    "studentId": "CA-1247-V-01",
+    "name": "飾東スキッド",
+    "eidolon": "Quadrant Halo",
+    "class": "Valkein",
+    "rarity": "R",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-V-01.webp"
+  },
+  {
+    "id": "087",
+    "studentId": "CA-1247-V-02",
+    "name": "橘 焔",
+    "eidolon": "ヴォルカニクス",
+    "class": "Valkein",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-V-02.webp"
+  },
+  {
+    "id": "088",
+    "studentId": "CA-1247-V-03",
+    "name": "紫狂 ルクス",
+    "eidolon": "PRISMATIC NOISE",
+    "class": "Valkein",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-V-03.webp"
+  },
+  {
+    "id": "089",
+    "studentId": "CA-1247-V-06",
+    "name": "ミラ",
+    "eidolon": "シーヴァ",
+    "class": "Valkein",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-V-06.webp"
+  },
+  {
+    "id": "090",
+    "studentId": "CA-1247-V-08",
+    "name": "カイト",
+    "eidolon": "ドリドス",
+    "class": "Valkein",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-V-08.webp"
+  },
+  {
+    "id": "091",
+    "studentId": "CA-1247-V-09",
+    "name": "霧杜 傀",
+    "eidolon": "ミスター・グランド",
+    "class": "Valkein",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-V-09.webp"
+  },
+  {
+    "id": "092",
+    "studentId": "CA-1247-V-10",
+    "name": "ノクタリカ・フォン・ハッセル",
+    "eidolon": "ルナ",
+    "class": "Valkein",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-V-10.webp"
+  },
+  {
+    "id": "093",
+    "studentId": "CA-1247-V-11",
+    "name": "神代 凪",
+    "eidolon": "オブスキュラ",
+    "class": "Valkein",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-V-11.webp"
+  },
+  {
+    "id": "094",
+    "studentId": "CA-1247-V-13",
+    "name": "霧島 雫香",
+    "eidolon": "漆黒の霧月",
+    "class": "Valkein",
+    "rarity": "N",
+    "lore": "ログ断片未設定",
+    "image": "/images/CA-1247-V-13.webp"
+  }
+]

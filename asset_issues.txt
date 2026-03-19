@@ -1,0 +1,2 @@
+Duplicate image IDs for CA-1247-P-08; selected CA-1247-P-08-Anko  東京百鬼パレード.webp by creator match.
+Missing exact image ID for CA-1247-P-10; mapped to CA-1247-P-08-たやちゅん（tayacyun).webp by creator match.
