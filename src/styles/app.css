@@ -25,7 +25,7 @@
   display: grid;
   gap: 24px;
   grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.95fr);
-  align-items: end;
+  align-items: start;
   margin-bottom: 28px;
 }
 
@@ -106,11 +106,44 @@
 .gacha-core {
   display: grid;
   gap: 18px;
+  align-content: start;
 }
 
 .result-capture {
   display: grid;
   gap: 18px;
+}
+
+.result-export-stage {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.result-export-shot {
+  position: absolute;
+  left: -10000px;
+  top: 0;
+  width: 960px;
+  aspect-ratio: 3 / 4;
+}
+
+.result-export-shot .gacha-sequence {
+  min-height: 0;
+  height: 100%;
+}
+
+.result-export-shot .gacha-sequence__frame {
+  min-height: 100%;
+  height: 100%;
+  grid-template-rows: auto 1fr auto;
+}
+
+.result-export-shot .gacha-sequence__viewport {
+  min-height: 0;
+  height: 100%;
 }
 
 .terminal-panel {
@@ -333,7 +366,7 @@
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .terminal-actions--primary {
@@ -1794,6 +1827,7 @@
 .terminal-side-column {
   display: grid;
   gap: 18px;
+  align-content: start;
 }
 
 .history-entry {

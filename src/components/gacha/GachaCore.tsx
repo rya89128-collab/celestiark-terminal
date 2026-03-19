@@ -223,10 +223,21 @@ export function GachaCore({
 
         {session && currentStep && (
           <>
-            <div
-              className="result-capture"
-              ref={currentStep.phase === 'complete' ? resultCaptureRef : undefined}
-            >
+            {currentStep.phase === 'complete' && (
+              <div className="result-export-stage" aria-hidden="true">
+                <div className="result-export-shot" ref={resultCaptureRef}>
+                  <GachaSequence
+                    currentPhase={currentStep}
+                    onInspect={() => {}}
+                    onVideoFallback={() => {}}
+                    phaseIndex={phaseIndex}
+                    session={session}
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className="result-capture">
               <GachaSequence
                 currentPhase={currentStep}
                 onInspect={inspectResult}
