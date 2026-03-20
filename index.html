@@ -10,8 +10,9 @@
     <script>
       (function () {
         const measurementId = '%VITE_GA_MEASUREMENT_ID%';
+        const unresolvedPlaceholder = '%' + 'VITE_GA_MEASUREMENT_ID' + '%';
 
-        if (!measurementId || measurementId === '%VITE_GA_MEASUREMENT_ID%') {
+        if (!measurementId || measurementId === unresolvedPlaceholder) {
           return;
         }
 
