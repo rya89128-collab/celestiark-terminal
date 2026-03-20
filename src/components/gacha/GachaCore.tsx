@@ -3,6 +3,7 @@ import { createEmptyStorage, resetRarityState } from '../../features/gacha/stora
 import { executeSync } from '../../features/gacha/syncEngine';
 import type { CardLog } from '../../types/card';
 import type { StorageSnapshot, SyncSession } from '../../types/sync';
+import { trackAnalyticsEvent } from '../../utils/analytics';
 import { downloadNodeAsPng } from '../../utils/export';
 import { FullSyncCelebration } from './FullSyncCelebration';
 import { GachaSequence } from './GachaSequence';
@@ -21,6 +22,10 @@ const RESULT_LOG_DELAY_MS = 900;
 
 function getCardById(cards: readonly CardLog[], cardId: string): CardLog | null {
   return cards.find((card) => card.id === cardId) ?? null;
+}
+
+function getTotalDrawCount(snapshot: StorageSnapshot) {
+  return Object.values(snapshot.drawCounts).reduce((sum, count) => sum + count, 0);
 }
 
 export function GachaCore({
@@ -47,7 +52,7 @@ export function GachaCore({
     [cards, storage.lastSyncResult],
   );
   const totalDraws = useMemo(
-    () => Object.values(storage.drawCounts).reduce((sum, count) => sum + count, 0),
+    () => getTotalDrawCount(storage),
     [storage.drawCounts],
   );
 
@@ -93,6 +98,7 @@ export function GachaCore({
     const nextStorage = justCompletedAll
       ? { ...execution.storage, fullSyncCelebrated: true }
       : execution.storage;
+    const eventName = count === 10 ? 'gacha_draw_ten' : 'gacha_draw_single';
 
     onStorageChange(nextStorage);
     setSession(execution.session);
@@ -100,6 +106,25 @@ export function GachaCore({
     setTempo(1);
     setVideoFallback(false);
     setShowFullSyncCelebration(justCompletedAll);
+
+    trackAnalyticsEvent(eventName, {
+      draw_count: count,
+      draw_mode: execution.session.mode,
+      forced_sync: forced,
+      top_rarity: execution.session.topRarity,
+      new_sync_count: execution.session.newSyncCount,
+      unique_synced_total: nextStorage.syncedLogs.length,
+      total_draws: getTotalDrawCount(nextStorage),
+    });
+
+    if (justCompletedAll) {
+      trackAnalyticsEvent('full_sync_complete', {
+        total_cards: cards.length,
+        total_draws: getTotalDrawCount(nextStorage),
+        trigger_mode: execution.session.mode,
+        trigger_top_rarity: execution.session.topRarity,
+      });
+    }
   };
 
   const inspectResult = (cardId: string) => {
@@ -145,6 +170,22 @@ export function GachaCore({
       resultCaptureRef.current,
       `celestiark-result-${session.topRarity}-${session.sessionId}`,
     );
+
+    trackAnalyticsEvent('result_saved', {
+      draw_mode: session.mode,
+      result_count: session.results.length,
+      top_rarity: session.topRarity,
+      new_sync_count: session.newSyncCount,
+    });
+  };
+
+  const handleOpenLogBoard = () => {
+    trackAnalyticsEvent('collection_opened', {
+      unique_synced_total: storage.syncedLogs.length,
+      total_cards: cards.length,
+      total_draws: getTotalDrawCount(storage),
+    });
+    onOpenLogBoard();
   };
 
   const lastSummary = lastResultCards.length > 0
@@ -205,7 +246,7 @@ export function GachaCore({
           <button disabled={isRunning} onClick={() => startSync(10, false)} type="button">
             10回同期
           </button>
-          <button className="ghost-button" onClick={onOpenLogBoard} type="button">
+          <button className="ghost-button" onClick={handleOpenLogBoard} type="button">
             コレクション一覧
           </button>
         </div>
@@ -254,7 +295,7 @@ export function GachaCore({
                   <button onClick={() => startSync(10, false)} type="button">
                     10回同期
                   </button>
-                  <button className="ghost-button" onClick={onOpenLogBoard} type="button">
+                  <button className="ghost-button" onClick={handleOpenLogBoard} type="button">
                     コレクション一覧
                   </button>
                 </div>

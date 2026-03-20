@@ -5,54 +5,18 @@ declare global {
   }
 }
 
-const GA_SCRIPT_ID = 'ga4-script';
+type AnalyticsValue = string | number | boolean;
+type AnalyticsParams = Record<string, AnalyticsValue | null | undefined>;
 
-function getMeasurementId(): string | null {
-  const value = import.meta.env.VITE_GA_MEASUREMENT_ID;
-
-  if (typeof value !== 'string') {
-    return null;
-  }
-
-  const trimmed = value.trim();
-  return trimmed === '' ? null : trimmed;
-}
-
-function createGtag() {
-  window.dataLayer = window.dataLayer ?? [];
-  window.gtag = (...args: unknown[]) => {
-    window.dataLayer?.push(args);
-  };
-}
-
-function ensureAnalyticsScript(measurementId: string) {
-  if (document.getElementById(GA_SCRIPT_ID)) {
+export function trackAnalyticsEvent(eventName: string, params: AnalyticsParams = {}) {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
     return;
   }
 
-  const script = document.createElement('script');
-  script.id = GA_SCRIPT_ID;
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
-  document.head.appendChild(script);
-}
+  const payload = Object.fromEntries(
+    Object.entries(params).filter(([, value]) => value !== null && value !== undefined),
+  );
 
-export function initializeAnalytics() {
-  const measurementId = getMeasurementId();
-
-  if (!measurementId || typeof window === 'undefined') {
-    return false;
-  }
-
-  createGtag();
-  ensureAnalyticsScript(measurementId);
-
-  window.gtag?.('js', new Date());
-  window.gtag?.('config', measurementId, {
-    page_title: document.title,
-    page_path: window.location.pathname + window.location.search + window.location.hash,
-  });
-
-  return true;
+  window.gtag('event', eventName, payload);
 }
 
